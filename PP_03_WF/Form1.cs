@@ -92,6 +92,11 @@ namespace PP_03_WF
                             }
                         }
                     }
+
+                    if ( (((coordsArray[0, i] - radiusArray[i]) < 0) || ((coordsArray[1, i] - radiusArray[i]) < 0)) || ((coordsArray[0, i] + radiusArray[i]) > this.Width) || ((coordsArray[1, i] + radiusArray[i]) > this.Height) )
+                    {
+                        checkArray[i] = true;
+                    }
                 }
                 Thread.Sleep(10);
             }
